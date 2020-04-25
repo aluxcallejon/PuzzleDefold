@@ -1,7 +1,7 @@
 function init(self)
-	self.center = vmath.vector3(600, 600, 0) -- <1> 350,350
+	self.center = vmath.vector3(300, 500, 0) -- <1> 350,350
 	self.radius = 160 -- <2>
-	self.speed = 10 -- <3>
+	self.speed = 2 -- <3>
 	self.t = 0 -- <4>
 end
 
@@ -12,6 +12,7 @@ function update(self, dt)
 	local pos = vmath.vector3() -- <7>
 	--pos.x = self.center.x + dx -- <8>
 	pos.y = self.center.y + dy
+	pos.x = self.center.x
 	go.set_position(pos) -- <9>
 end
 
